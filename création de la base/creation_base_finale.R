@@ -24,6 +24,7 @@ fwrite(df2, "../edges_mobilites_nb.csv")
 
 df3 = data[, c("CODGEO", "DCRAN", "NBFLUX_C22_POP01P")]
 setnames(df3, c("CODGEO", "DCRAN", "NBFLUX_C22_POP01P"), c("source", "target", "nb_migrations"))
+fwrite(df3, "../edges_mobilites_nb_code_insee.csv")
 
 
 info_com = fread("communes-france-2025.csv")
